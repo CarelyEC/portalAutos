@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\autos",
+    "\\src\\app\\interceptores",
+    "\\src\\app\\servicios",
+    "\\src\\app\\utilitarios"
+  ],
+  "SelectedNode": "\\src\\app\\servicios\\Vehiculo.service.ts",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "http://productos-bg-bc.test",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

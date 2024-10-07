@@ -1,0 +1,67 @@
+<main>
+  <div class="text-center">
+    <img class="d-block mx-auto mb-4"
+         src="https://static.vecteezy.com/system/resources/thumbnails/008/075/355/small/car-logo-abstract-lines-illustration-vector.jpg"
+         alt="" height="75">
+    <h2>EDITAR VEHÍCULO</h2>
+    <p class="lead text-uppercase"><b>{{ vehiculo?.marca }} {{ vehiculo?.modelo }}</b></p>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="formulario">
+        <div class="mb-3 row">
+          <div class="col-lg-5">
+            <label>Código:</label>
+            <input class="form-control" formControlName="codigo">
+            <div class="text-danger" *ngIf="formulario.controls['codigo'].errors?.['required']">Requerido</div>
+          </div>
+          <div class="col-lg-7">
+
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-lg-5">
+            <label>Marca:</label>
+            <input class="form-control" formControlName="marca">
+            <div class="text-danger" *ngIf="formulario.controls['marca'].errors?.['required']">Requerido</div>
+          </div>
+          <div class="col-lg-5">
+            <label>Modelo:</label>
+            <input class="form-control" formControlName="modelo">
+            <div class="text-danger" *ngIf="formulario.controls['modelo'].errors?.['required']">Requerido</div>
+          </div>
+          <div class="col-lg-2">
+            <label class="">Año:</label>
+            <input type="text" class="form-control" name="anio" formControlName="anio">
+            <div class="text-danger" *ngIf="formulario.controls['anio'].errors?.['required']">Requerido</div>
+          </div>
+
+        </div>
+        <div class="mb-3 row">
+          <div class="col-lg-5">
+            <label class="col-sm-2 col-form-label">Kilometraje:</label>
+            <input type="text" class="form-control" name="kilometraje"
+                   formControlName="kilometraje">
+            <div class="text-danger" *ngIf="formulario.controls['kilometraje'].errors?.['required']">Requerido</div>
+          </div>
+          <div class="col-lg-5">
+            <label class="col-sm-2 col-form-label">Calificación:</label>
+            <input type="number" class="form-control" name="calificacion"
+                   formControlName="calificacion">
+          </div>
+          <div class="col-lg-2">
+            <label class="col-sm-2 col-form-label">Precio:</label>
+            <input type="number" class="form-control" name="precio" formControlName="precio">
+            <div class="text-danger" *ngIf="formulario.controls['precio'].errors?.['required']">Requerido</div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <hr class="my-4">
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4" (click)="goInicio()">CANCELAR</button>
+    </div>
+  </div>
+</main>
+
